@@ -106,16 +106,24 @@ def extract_bibtex(url):
 def simple_author_search(author, get=True):
     args = {'author': author }
     ans = do_complex_get_request(SIMPLE_AUTHOR_SEARCH_URL, args)
-    bibtex = {}
 
     soup = BeautifulSoup(str(ans))
-    r = soup.findAll('a', attrs={'name': re.compile("^p[0-9]+$")})
-    for a in r:
-        url = a['href']
-        key = url.split('/')[-1]
-        if get:
-            bibtex[key] = extract_bibtex(a['href'])
-        else:
-            bibtex[key] = url
 
-    return bibtex
+    if str(ans).find("Search Results for") != -1:
+        author_choice = []
+        for li in soup.findAll('li'):
+            author_choice.append(li.contents[0].string)
+        return (False, author_choice)
+    else:
+        bibtex = {}
+        ## looks like we have a correct match for the name
+        r = soup.findAll('a', attrs={'name': re.compile("^p[0-9]+$")})
+        for a in r:
+            url = a['href']
+            key = url.split('/')[-1]
+            if get:
+                bibtex[key] = extract_bibtex(a['href'])
+            else:
+                bibtex[key] = url
+
+        return (True, bibtex)
