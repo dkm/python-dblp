@@ -1,0 +1,22 @@
+Source: python-dblp
+Section: utils
+Priority: extra
+Maintainer: Marc Poulhiès <marc.poulhies@imag.fr>
+Build-Depends: cdbs, debhelper (>= 7), python-support, python-all-dev
+Standards-Version: 3.8.1
+Homepage: http://github.com/dkm/python-dblp/
+
+Package: python-dblp
+Architecture: all
+Section: python
+Depends: ${python:Depends}
+Description: DBLP python module
+ Python module to interact with DBLP publication database.
+
+Package: dblp-cli
+Architecture: all
+Depends: ${python:Depends}, python-dblp 
+Description: DBLP command line interface
+ DBLP command line interface.
+ .
+ Allows for simple requests to the DBLP database.
