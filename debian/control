@@ -1,7 +1,7 @@
 Source: python-dblp
 Section: utils
 Priority: extra
-Maintainer: Marc Poulhiès <marc.poulhies@imag.fr>
+Maintainer: Marc Poulhiès <dkm@kataplop.net>
 Build-Depends: cdbs, debhelper (>= 7), python-support, python-all-dev
 Standards-Version: 3.8.1
 Homepage: http://github.com/dkm/python-dblp/

@@ -1,11 +1,11 @@
-This package was debianized by Marc Poulhiès <marc.poulhies@imag.fr> on
+This package was debianized by Marc Poulhiès <dkm@kataplop.net> on
 Mon, 1 Feb 2010 12:00:00 +0200.
 
 It was downloaded from <http://github.com/dkm/python-dblp/tree/master>
 
 Upstream Author(s):
 
-    Marc Poulhiès <marc.poulhies@imag.fr>
+    Marc Poulhiès <dkm@kataplop.net>
 
 Copyright:
 
@@ -30,7 +30,7 @@ License:
 
 The Debian packaging is:
 
-    Copyright (C) 2010 Marc Poulhiès <marc.poulhies@imag.fr>
+    Copyright (C) 2010 Marc Poulhiès <dkm@kataplop.net>
 
 and is licensed under the GPL version 3, 
 see `/usr/share/common-licenses/GPL-3'.
